@@ -111,7 +111,7 @@
       }
     } else {
       // Support blobs
-      a.href = URL.createObjectURL(blob);
+      a.href = URL.createObjectURL(bom(blob, opts));
       setTimeout(function () {
         URL.revokeObjectURL(a.href);
       }, 4E4); // 40s
